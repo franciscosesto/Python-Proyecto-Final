@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'PythonProyectoFinal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/Fran/Documents/Escritorio Fran/Coder House/28805-python/Proyecto final/Python-Proyecto-Final/PythonProyectoFinal/blog/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
