@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Busqueda</h1>
+        <p class="text-white-50 mb-0">Creador</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Busqueda creador </h2>
+                        <p class="lead">Por nickname</p>
+                        <form action="/blog/buscar_creador" method=”GET” class="mb-0" > 
+                            <input type="text" name="nickname" id="nickname">
+                            <input type="submit" value="Buscar">
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
+
+{% block image %}
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+{% endblock %}
+
+{% block content2 %}
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 id="About" name="About">About</h2>
+                        <p class="lead">Francisco Sesto </p>
+                        <p class="mb-0">Esto es el home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+{% endblock %}
