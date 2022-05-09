@@ -1,6 +1,6 @@
 # Python-Proyecto-Final
 **Link al video**
-https://www.youtube.com/watch?v=icxxvvRE870
+https://www.youtube.com/watch?v=nDNvSFsu8uw
 
 Este proyecto tiene una app llamada blog, justamente se trata de mi propio blog en el cual las personas pueden agregar artículos.
 
