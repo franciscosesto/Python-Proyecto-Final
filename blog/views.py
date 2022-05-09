@@ -275,7 +275,8 @@ class UpdateAvatarView(LoginRequiredMixin, UpdateView):
     fields=['image']
 
     def get_object(self):
-        return Avatar.objects.get(user=self.request.user)
+        avatar, created= Avatar.objects.get_or_create(user=self.request.user)
+        return avatar
 
 
 #-------- Sección de forms primera entrega-----------
