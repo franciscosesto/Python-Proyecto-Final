@@ -11292,3 +11292,341 @@ textarea.form-control-lg {
   background-position: center;
   background-size: cover;
 }
+
+.cssbuttons-io-button-login {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  font-family: inherit !important;
+  font-weight: 500 !important;
+  font-size: var(--bs-body-font-size) !important;
+  padding: 0.7em 1.4em 0.7em 1.1em !important;
+  color: white !important;
+  background: #ad5389 !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(20,167,62,1)), to(rgba(102,247,113,1))) !important;
+  background: linear-gradient(0deg, rgba(23,10,150,1) 0%, rgba(10,10,1000,1) 100%) !important;
+  border: none !important;
+  -webkit-box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+  letter-spacing: 0.05em !important;
+  border-radius: 20em !important;
+ }
+ 
+
+ .cssbuttons-io-button-login:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          color:black !important;
+ }
+ 
+ .cssbuttons-io-button-login:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+ }
+
+ .register-link {
+  display: inline;
+  padding: 0.5rem 1rem;
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+
+.post-preview > a > .post-title {
+  font-size: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.post-preview > a {
+  color: #212529;
+}
+
+a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.post-preview > a > .post-subtitle {
+  font-weight: 300;
+  margin-bottom: 0.625rem;
+}
+
+.post-preview > .post-meta {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-top: 0;
+  color: #6c757d;
+}
+
+
+.post-preview > a:focus, .post-preview > a:hover{
+  text-decoration: none;
+  color: #0085A1;
+}
+
+.article-author:hover{
+  color:black;
+
+}
+
+/* From uiverse.io by @adamgiebl */
+.cssbuttons-io-button {
+  background: #A370F0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+ }
+ 
+ .cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+ }
+ 
+ .cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+ }
+ 
+ .cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+ }
+ 
+ .cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+ }
+ 
+ .cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+ }
+
+
+
+ :root{
+  --background-dark: #ffffff;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+.especial{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+body{
+  height: 100%;
+}
+
+
+ .hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #ffffff 0%, #ffffff 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+  border:none !important;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+
+/* From uiverse.io by @adamgiebl */
+ .cssbuttons-io-button-article {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  font-family: inherit !important;
+  font-weight: 500 !important;
+  font-size: var(--bs-body-font-size) !important;
+  padding: 0.7em 1.4em 0.7em 1.1em !important;
+  color: white !important;
+  background: #ad5389 !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(20,167,62,1)), to(rgba(102,247,113,1))) !important;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%) !important;
+  border: none !important;
+  -webkit-box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+  letter-spacing: 0.05em !important;
+  border-radius: 20em !important;
+ }
+ 
+
+ .cssbuttons-io-button-article:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          color:black !important;
+ }
+ 
+ .cssbuttons-io-button-article:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+ }
+
+
+ /* From uiverse.io by @adamgiebl */
+ .cssbuttons-io-button-article-delete {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  font-family: inherit !important;
+  font-weight: 500 !important;
+  font-size: var(--bs-body-font-size) !important;
+  padding: 0.7em 1.4em 0.7em 1.1em !important;
+  color: white !important;
+  background: #ad5389 !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1000,0,7,1)), to(rgba(2000,100,113,1))) !important;
+  background: linear-gradient(0deg, rgba(1000,0,7,1) 0%, rgba(2000,100,113,1) 100%) !important;
+  border: none !important;
+  -webkit-box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.7em 1.5em -0.5em #14a73e98 !important;
+  letter-spacing: 0.05em !important;
+  border-radius: 20em !important;
+ }
+ 
+
+ .cssbuttons-io-button-article-delete:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98 !important;
+          color:black !important;
+ }
+ 
+ .cssbuttons-io-button-article-delete:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98 !important;
+ }
+
+
+ .useful-link {
+  display: inline;
+  padding: 0.5rem 1rem;
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}

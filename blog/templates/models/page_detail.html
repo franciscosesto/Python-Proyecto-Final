@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Article4.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
+        <p class="text-white-50 mb-0">Mi blog</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>{{object.title}} </h2>
+                        <p class="lead">{{object.subtitle}}</p>
+                        <p class="mb-0">{{object.body|safe}} </p>
+                        <p class="mb-0">Escrito por <strong>{{object.author}}</strong></p>
+                        {% if user.is_authenticated %}
+                        <br>
+                        <form action="{% url 'page-update' object.pk %}">
+                            <button class="cssbuttons-io-button-login" type="submit" >
+                             <span > Editar</span> </button>
+                        </form>
+                        
+                        <br>
+                        <form action="{% url 'page-delete' object.pk%}">
+                            <button class="cssbuttons-io-button-article-delete" type="submit" >
+                             <span > Eliminar </span> </button>
+                        </form>
+
+
+                        {% endif %}
+                        <br>
+                        <a class="mb-0" href="{% url 'pages' %}">← Volver</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}
+
+{% block image %}
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('{{object.image.url}}')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Home2.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
+        <p class="text-white-50 mb-0">Mi blog</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2> Agradecimientos </h2>
+                        <p class="mb-0">
+                            Antes de terminar esta página no quería dejar de agradecer a los tutores, a Kevyn y a todos los que me transmitieron su conocimiento sobre python. 
+                            Realmente desde que empecé a estudiar este lenguaje mi cabeza y mi modo de pensar cambiaron rotundamente.
+                        </p>
+                        <br>
+                            <p class="lead">Muchas gracias</p>
+    
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}
+

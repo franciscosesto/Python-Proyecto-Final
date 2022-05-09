@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Article4.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
+        <p class="text-white-50 mb-0">Mi blog</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                    {% if user.is_authenticated %}
+                    
+                        <form action="{% url 'messages-create' %}">
+                            <button class="cssbuttons-io-button-article" type="submit" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+                             <span >Añadir Mensaje </span> </button>
+                        </form>
+                        <br>
+                    {% endif %}
+                    {% for instance in object_list %}
+                      <!--Post preview-->
+                      <div class="post-preview">
+                              <h5 class="post-subtitle">{{instance.mensaje}}</h5>
+                          <p class="post-meta">
+                              Publicado por
+                              <a class="article-author">{{instance.user}}</a> 
+                          </p>
+                      </div>
+                    
+                    <!-- Divider-->
+                    <hr class="my-4">
+                     {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}

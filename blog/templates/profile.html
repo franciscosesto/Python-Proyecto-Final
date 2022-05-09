@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Home2.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
+        <p class="text-white-50 mb-0">Mi blog</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2> Mi usuario </h2>
+                        {% if avatar %}
+                        <div class="text-center my-5">
+                            <img class="img-fluid rounded-circle mb-4" src="{{avatar}}" alt="..."  width="150"/>
+                        </div>
+                        {% endif %}
+                        <p class="lead">Información</p>
+                        <p class="mb-0">
+                           <strong>Username:</strong> {{username}}<br>
+                           <strong>Nombre:</strong> {{name}}<br>
+                           <strong>Apellido:</strong> {{lastname}}<br>
+                           <strong> Email: </strong> {{email}} <br>
+                           {% if profile_data %}
+                           <strong>Descripción:</strong> <br> {{profile_data.Descripción|safe}}
+                           <strong> Link: </strong> <a href="{{profile_data.Link}}" class="useful-link">{{profile_data.Link}}</a> <br> 
+                           {% endif %}
+                        
+                           <strong>¿Deseas cambiar contraseña?</strong> <a href="{% url 'password-change' %}" class="useful-link">Cambiar contraseña </a> <br>
+                          
+                           {% if not profile_data %}
+                           <strong>¿Deseas agregar un link y una descripción?</strong> <a href="{% url 'add-profile-data' %}" class="useful-link">Agregar  </a>  <br>
+                           <br>
+                           {% else %}
+                           <br>
+                           <form action="{% url 'profile_data-update' pk_profile_data %}">
+                            <button class="cssbuttons-io-button-login" type="submit" >
+                             <span > Actualizar Descripción </span> </button>
+                            </form>
+                            <br>
+                            {% endif %}
+                           {% if not avatar %}
+                           <form action="{% url 'add-avatar' %}">
+                           <button class="cssbuttons-io-button-login" type="submit" >
+                            <span > Agregar Avatar</span> </button>
+                           </form>
+                           <br>
+                           {% else %}
+                           <form action="{% url 'avatar-update' pk_avatar %}">
+                            <button class="cssbuttons-io-button-login" type="submit" >
+                             <span > Actualizar Avatar</span> </button>
+                            </form>
+                            <br>
+                            {% endif %}
+                            
+                            <form action="{% url 'profile-update' %}">
+                                <button class="cssbuttons-io-button-login" type="submit" >
+                                 <span > Editar perfil</span> </button>
+                            </form>
+
+
+                                
+
+                           
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}
+

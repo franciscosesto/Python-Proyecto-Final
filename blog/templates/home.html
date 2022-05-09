@@ -3,11 +3,11 @@
 
 {% block header %}
  <!-- Header - set the background image for the header in the line below-->
- <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Home2.jpg' %}')">
     <div class="text-center my-5">
         <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
         <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
-        <p class="text-white-50 mb-0">Proyecto Final Coder</p>
+        <p class="text-white-50 mb-0">Mi blog</p>
     </div>
 </header>
 {% endblock %}
@@ -17,17 +17,49 @@
         <section class="py-5">
             <div class="container my-5">
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2>Home </h2>
-                        <p class="lead">Esto es el home</p>
-                        <p class="mb-0">Home
+                    <div class="especial">
+                        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-                        </p>
+                        <section class="hero-section">
+                          <div class="card-grid">
+                            <a class="card" href="{% url 'pages' %}">
+                              <div class="card__background" style="background-image: url('{% static 'assets/images/Article.jpg' %}')"></div>
+                              <div class="card__content">
+                                <p class="card__category">Sección</p>
+                                <h3 class="card__heading">Artículos</h3>
+                              </div>
+                            </a>
+                            <a class="card" href="{% url 'contact' %}">
+                              <div class="card__background" style="background-image: url('{% static 'assets/images/Contact.jpg' %}')"></div>
+                              <div class="card__content">
+                                <p class="card__category">Sección</p>
+                                <h3 class="card__heading">Contacto</h3>
+                              </div>
+                            </a>
+                            <a class="card" href="{% url 'messages' %}">
+                              <div class="card__background" style="background-image: url('{% static 'assets/images/Messages.jpg' %}')"></div>
+                              <div class="card__content">
+                                <p class="card__category">Sección</p>
+                                <h3 class="card__heading">Mensajes</h3>
+                              </div>
+                            </a>
+                            <a class="card" href="{% url 'agradecimientos' %}">>
+                              <div class="card__background" style="background-image: url('{% static 'assets/images/agradecer.jpg' %}')"></div>
+                              <div class="card__content">
+                                <p class="card__category">Sección</p>
+                                <h3 class="card__heading">Agradecimientos</h3>
+                              </div>
+                            </a>
+                          <div>
+                        </section>
+                    
+
                     </div>
                 </div>
             </div>
         </section>
 
+        
 {% endblock %}
 
 {% block image %}
@@ -39,17 +71,5 @@
 {% endblock %}
 
 {% block content2 %}
-        <!-- Content section-->
-        <section class="py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2 id="About" name="About">About</h2>
-                        <p class="lead">Francisco Sesto </p>
-                        <p class="mb-0">Esto es el home.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+       
 {% endblock %}

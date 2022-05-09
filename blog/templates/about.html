@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Home2.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Francisco Sesto</h1>
+        <p class="text-white-50 mb-0">Mi blog</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2> Curiosidades </h2>
+                        <p class="lead">Un poco de mi</p>
+                        <p class="mb-0">
+                            Mi nombre es Francisco Sesto, tengo 20 años y vivo en Pilar, Buenos Aires.
+                            Soy un estudiante de 3er año de Economía empresarial. Actualmente soy ayudante de catedra de Álgebra y Geometría en la misma universidad.
+                            <br>
+                            <br>
+                            Soy un apasionado de las matemáticas y de la música, toco la guitarra y otros instrumentos.
+                            <br>
+                            <br>
+                            Hace más de un año estoy saliendo con Vicky, nos conocimos en un grupo de la parroquia y desde ahí (el momento en que nos conocimos) siempre somos como complices uno del otro. 
+                            Las sonrisas y chistes entre nosotros son vitales.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}
+
+{% block image %}
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Vicky3.jpg' %}')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+{% endblock %}
+

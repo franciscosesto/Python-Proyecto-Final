@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block header %}
+ <!-- Header - set the background image for the header in the line below-->
+ <header class="py-5 bg-image-full" style="background-image: url('{% static 'assets/images/Article4.jpg' %}')">
+    <div class="text-center my-5">
+        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/images/Francisco_Sesto.jpg' %}" alt="..."  width="150"/>
+        <h1 class="text-white fs-3 fw-bolder">Formulario</h1>
+        <p class="text-white-50 mb-0">Perfil</p>
+    </div>
+</header>
+{% endblock %}
+
+{% block content1 %}
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2> Modificar Perfil </h2>
+                        <p class="lead">De {{user.first_name}} {{user.last_name}} </p>
+                        
+                            {% if form.errors %}
+
+                            <p style='color: red;' class="mb-0"> Estan mal los datos </p>
+                            {% endif %}
+                            
+                            <form action='' method='POST' class="mb-0" > {% csrf_token%}
+                                <table>
+                                 {{ form |crispy}}
+                                 {{ form.media }}
+                                </table>
+                            <br>
+                            <input type='submit' value='Enviar' class="mb-0">
+                            </form>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
