@@ -1,4 +1,7 @@
 # Python-Proyecto-Final
+**Link al video**
+https://www.youtube.com/watch?v=icxxvvRE870
+
 Este proyecto tiene una app llamada blog, justamente se trata de mi propio blog en el cual las personas pueden agregar artículos.
 
 La app cuenta con 7 modelos y 4 propios de esta entrega y que se implementan
