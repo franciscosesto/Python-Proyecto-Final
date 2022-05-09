@@ -69,7 +69,7 @@ class ProfileVista(LoginRequiredMixin, TemplateView):
    def get(self, request, status=None):
        user= self.request.user
        try:
-           avatar= Avatar.objects.get(user=user.id)
+           avatar= Avatar.objects.get(user=user.id).image.url
        except Exception as e :
            print(type(e).__name__)
            avatar=False 
@@ -78,8 +78,18 @@ class ProfileVista(LoginRequiredMixin, TemplateView):
        except Exception as e :
            print(type(e).__name__)
            profile_data=False    
-       context= {"username":user.username, "email":user.email,"name":user.first_name, "lastname":user.last_name, "avatar": avatar.image.url,
-       "pk_avatar":Avatar.objects.get(user=self.request.user).pk, "profile_data":profile_data,"pk_profile_data":ProfileData.objects.get(user=self.request.user).pk, }
+       try:
+           profile_data_pk= ProfileData.objects.get(user=self.request.user).pk
+       except Exception as e :
+           print(type(e).__name__)
+           profile_data_pk=False  
+       try:
+           pk_avatar=Avatar.objects.get(user=self.request.user).pk
+       except Exception as e :
+           print(type(e).__name__)
+           pk_avatar=False 
+       context= {"username":user.username, "email":user.email,"name":user.first_name, "lastname":user.last_name, "avatar": avatar,
+       "pk_avatar":pk_avatar, "profile_data":profile_data,"pk_profile_data":profile_data_pk}
        return render(request, self.template_name, context)
 
 class ProfileUpdateView(LoginRequiredMixin,TemplateView):
